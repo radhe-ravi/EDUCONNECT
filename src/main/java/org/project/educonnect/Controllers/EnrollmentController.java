@@ -23,6 +23,7 @@ public class EnrollmentController {
 
 		EnrollmentResponseDTO enrollment = enrollmentService.addEnrollemnt(enrollmentDTO);
 
+
 		if (enrollment == null)
 			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Course or user with given ids not found");
 
