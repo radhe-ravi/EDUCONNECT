@@ -2,9 +2,7 @@ package org.project.educonnect.Models;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.sql.Timestamp;
 
@@ -12,6 +10,9 @@ import java.sql.Timestamp;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "enrollments")
+@Entity
+@Getter
+@Setter
 public class Enrollment {
 
     @Id

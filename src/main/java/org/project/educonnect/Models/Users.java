@@ -16,32 +16,26 @@ import java.util.List;
 public class Users {
 
     @Id
-    @Column(
-            name = "user_id"
-    )
-    @GeneratedValue(
-            strategy = GenerationType.IDENTITY
-    )
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "user_id")
+    private int id;
 
-    @Column(
-            name = "name"
-    )
-    private String name;
+    @Column(name = "user_name")
+    private String userName;
 
-    @Column(
-            name = "password"
-    )
-    private String password;
+    @Column(name = "user_password")
+    private String userPassword;
 
-    @Enumerated(EnumType.STRING)
-    private Role role;
+    @Column(name = "role")
+    private String role;
 
-    @OneToMany(mappedBy = "author",cascade = CascadeType.ALL)
+    //for user to courses
+    @OneToMany(mappedBy = "author", cascade = CascadeType.ALL)
     @JsonIgnore
     List<Course> courses;
 
-    @OneToMany(mappedBy = "user_info",cascade = CascadeType.ALL)
+    //for user to enrollments
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     @JsonIgnore
-    List<Enrollment> enrollments;
+    List<Enrollment> enrollments;;
 }
