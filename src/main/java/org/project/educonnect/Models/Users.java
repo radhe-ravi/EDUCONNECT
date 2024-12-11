@@ -35,7 +35,7 @@ public class Users {
     List<Course> courses;
 
     //for user to enrollments
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "users", cascade = CascadeType.ALL)
     @JsonIgnore
     List<Enrollment> enrollments;;
 }

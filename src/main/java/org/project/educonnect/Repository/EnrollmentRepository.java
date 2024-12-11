@@ -11,7 +11,7 @@ import java.util.List;
 @Repository
 public interface EnrollmentRepository extends JpaRepositoryImplementation<Enrollment, Integer> {
 
-	@Query("SELECT COUNT(e) > 0 FROM Enrollment e WHERE e.user.id = :userId AND e.course.id = :courseId")
+	@Query("SELECT COUNT(e) > 0 FROM Enrollment e WHERE e.users.id = :userId AND e.course.id = :courseId")
 	boolean existsByUserIdAndCourseId(int userId, int courseId);
 
 	@Query(value = "SELECT is_favourite FROM enrollments WHERE user_id = :userId AND course_id = :courseId", nativeQuery = true)

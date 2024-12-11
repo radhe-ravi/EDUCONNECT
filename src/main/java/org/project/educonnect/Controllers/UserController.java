@@ -1,8 +1,8 @@
 package org.project.educonnect.Controllers;
 
-import com.example.learningportal.learningportal.DTO.UserDTO;
-import com.example.learningportal.learningportal.DTO.UserResponseDTO;
-import com.example.learningportal.learningportal.Services.UserService;
+import org.project.educonnect.DTO.UserDTO;
+import org.project.educonnect.DTO.UserResponseDTO;
+import org.project.educonnect.Services.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
